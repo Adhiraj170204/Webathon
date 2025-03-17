@@ -84,7 +84,7 @@ function Header() {
             {/* Icons */}
           </div>
           <div className="flex gap-4 items-center ml-auto">
-            <Link to={'/wishlist'}>
+            <Link to={"/wishlist"}>
               <button>
                 <svg
                   width="33"
@@ -103,11 +103,13 @@ function Header() {
               </button>
             </Link>
             <div className="w-px h-6 bg-stone-300" />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f3c34996f6f63a6e3e554f4aac11e4df20a3880"
-              alt=""
-              className="w-[32px] h-[32px]"
-            />
+            <Link to={"/cart"}>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f3c34996f6f63a6e3e554f4aac11e4df20a3880"
+                alt=""
+                className="w-[32px] h-[32px]"
+              />
+            </Link>
             <div className="w-px h-6 bg-stone-300" />
             <div className="relative">
               <button>
@@ -162,9 +164,11 @@ function Header() {
       <div className="flex justify-between items-center px-18 py-4 w-full bg-zinc-800 max-md:px-10 max-sm:px-5">
         <div className="flex gap-8 items-center max-sm:hidden">
           <div className="flex gap-1 items-center group">
-            <button className="text-xl font-medium leading-8 text-white group-hover:text-white">
-              Home
-            </button>
+            <Link to={'/'}>
+              <button className="text-xl font-medium leading-8 text-white group-hover:text-white">
+                Home
+              </button>
+            </Link>
             <svg
               width="17"
               height="16"

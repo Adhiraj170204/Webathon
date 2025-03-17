@@ -145,29 +145,6 @@ const NewProducts = () => {
         </h2>
         <button className="flex gap-3 items-center text-base font-medium text-green-600 cursor-pointer max-sm:text-sm">
           <span>View All</span>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 91 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="arrow-icon"
-          >
-            <path
-              d="M90 12.0005H75"
-              stroke="#00B307"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-            <path
-              d="M83.95 5.97559L90 11.9996L83.95 18.0246"
-              stroke="#00B307"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-          </svg>
         </button>
       </header>
 
