@@ -1,39 +1,50 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const User = require('../model/User');
 
-// Protect routes
-exports.protect = async (req, res, next) => {
+// Middleware to protect routes
+const protect = async (req, res, next) => {
     let token;
 
-    // Get token from header
+    // Check for token in headers
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
-        token = req.headers.authorization.split(' ')[1];
-    }
+        try {
+            // Get token from header
+            token = req.headers.authorization.split(' ')[1];
 
-    // Check if token exists
-    if (!token) {
-        return res.status(401).json({ message: 'Not authorized to access this route' });
-    }
+            // Verify token
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    try {
-        // Verify token
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            // Get user from token
+            req.user = await User.findById(decoded.id).select('-password');
 
-        // Get user from token
-        req.user = await User.findById(decoded.id).select('-password');
-
-        next();
-    } catch (error) {
-        return res.status(401).json({ message: 'Not authorized to access this route' });
-    }
-};
-
-// Role authorization
-exports.authorize = (...roles) => {
-    return (req, res, next) => {
-        if (!roles.includes(req.user.role)) {
-            return res.status(403).json({ message: `User role ${req.user.role} is not authorized to access this route` });
+            next();
+        } catch (error) {
+            console.error(error);
+            res.status(401).json({ msg: 'Not authorized, token failed' });
         }
-        next();
-    };
+    }
+
+    if (!token) {
+        res.status(401).json({ msg: 'Not authorized, no token' });
+    }
 };
+
+// Middleware to check if user is a seller
+const seller = (req, res, next) => {
+    if (req.user && req.user.role === 'seller') {
+        next();
+    } else {
+        res.status(403).json({ msg: 'Not authorized as a seller' });
+    }
+};
+
+// Middleware to check if user is a student
+const student = (req, res, next) => {
+    if (req.user && req.user.role === 'student') {
+        next();
+    } else {
+        res.status(403).json({ msg: 'Not authorized as a student' });
+    }
+};
+
+module.exports = { protect, seller, student };

@@ -5,7 +5,7 @@ function ProgressTracker() {
     <>
       <div className="flex z-10 flex-wrap gap-10 justify-between items-center mt-10 w-full text-sm leading-10 text-center text-green-600 whitespace-nowrap max-w-[800px] max-md:max-w-full">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/61521198fbb94bc3475e42280ecf48adacc1f55a83245bcaf3506455fb3af969?placeholderIfAbsent=true&apiKey=1b6dd8aee5454995bdff5445c5fb569a"
+          src="https://images.unsplash.com/photo-1604593686423-45bbaa773f8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=70&h=70&q=80"
           className="object-contain shrink-0 self-stretch my-auto w-10 aspect-square"
           alt="Progress step 1"
         />
@@ -24,7 +24,7 @@ function ProgressTracker() {
         </div>
       </div>
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/dc14e590e812a4bd82b9b7547735b6306cf2a644757f4424fd167f3368e195df?placeholderIfAbsent=true&apiKey=1b6dd8aee5454995bdff5445c5fb569a"
+        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=760&h=5&q=80"
         className="object-contain -mt-5 w-full max-w-[760px] max-md:max-w-full"
         alt="Progress line"
       />

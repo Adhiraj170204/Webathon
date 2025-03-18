@@ -110,8 +110,8 @@ const HotDealsCard = ({
   };
 
   const handleQuickView = () => {
-    // Quick view functionality would go here
-    console.log('Quick view for', name);
+    // Show quick view modal or navigate to product details
+    onQuickView();
   };
 
   return (

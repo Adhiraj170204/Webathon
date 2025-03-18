@@ -6,7 +6,7 @@ function ProductList() {
       id: 1,
       name: "Red Capsicum",
       image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/30c6dc18a70fe68f8073da4de5c19c27c0be166c555870800c6487114d48cf8d?placeholderIfAbsent=true&apiKey=1b6dd8aee5454995bdff5445c5fb569a",
+        "https://images.unsplash.com/photo-1594041680839-fdd59e292b93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       price: "$14.00",
       quantity: "x5",
       subtotal: "$70.00",
@@ -15,7 +15,7 @@ function ProductList() {
       id: 2,
       name: "Green Capsicum",
       image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/119f743cdff91cca727dbc9fa98b62a67629b7709886e98085a5d0eddce709c8?placeholderIfAbsent=true&apiKey=1b6dd8aee5454995bdff5445c5fb569a",
+        "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       price: "$14.00",
       quantity: "x2",
       subtotal: "$28.00",
@@ -24,7 +24,7 @@ function ProductList() {
       id: 3,
       name: "Green Chili",
       image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/f8a3117a9a4a163958e0f9c1b7deb5256bb6835038e0fe27c8fed9779e06e62a?placeholderIfAbsent=true&apiKey=1b6dd8aee5454995bdff5445c5fb569a",
+        "https://images.unsplash.com/photo-1621178311482-147a1dac9848?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       price: "$26.70",
       quantity: "x10",
       subtotal: "$267.00",
